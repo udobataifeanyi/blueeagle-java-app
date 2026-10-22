@@ -1,0 +1,18 @@
+[Unit]
+Description=BlueEagle KYC document-retrieval-service
+After=network.target
+
+[Service]
+Type=simple
+User=docservice
+Group=docservice
+WorkingDirectory=/opt/docservice
+Environment="AWS_REGION=__AWS_REGION__"
+Environment="S3_BUCKET_NAME=__S3_BUCKET_NAME__"
+ExecStart=/usr/bin/java -jar /opt/docservice/document-retrieval-service.jar
+Restart=on-failure
+RestartSec=5
+SyslogIdentifier=docservice
+
+[Install]
+WantedBy=multi-user.target
