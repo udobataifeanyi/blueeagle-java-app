@@ -9,7 +9,7 @@ set -euo pipefail
 
 AWS_REGION="__AWS_REGION__"
 S3_BUCKET_NAME="__S3_BUCKET_NAME__"
-REPO_URL="https://gitlab.com/wandaprep/document-retrieval-service.git"
+REPO_URL="https://github.com/udobataifeanyi/-document-retrieval-service.git"
 BUILD_DIR="/opt/build/document-retrieval-service"
 INSTALL_DIR="/opt/docservice"
 
